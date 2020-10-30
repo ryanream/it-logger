@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addLog } from '../../actions/logActions'; // what - this is a prop
 import M from 'materialize-css/dist/js/materialize.min.js';
 
-const AddLogModal = () => {
+// bring in addLog() prop (from logActions)
+const AddLogModal = ({ addLog }) => {
   const [message, setMessage] = useState('');
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState('');
@@ -14,10 +18,22 @@ const AddLogModal = () => {
   };
 
   const onSubmit = () => {
+    // check if data was entered in both fields
     if (message === '' || tech === '') {
       M.toast({ html: 'Plese enter a message and tech' });
+      // create the newLog ( add data to correct variables? doesn't look like we're doing this atm )
     } else {
-      console.log(message, tech, attention);
+      const newLog = {
+        message,
+        attention,
+        tech,
+        date: new Date(),
+      };
+      // send the newLog to the addLog method
+
+      addLog(newLog);
+      // what?
+      M.toast({ html: `Log added by ${tech}` });
       clearFields();
     }
   };
@@ -86,9 +102,14 @@ const AddLogModal = () => {
   );
 };
 
+// what - why is this lower case 'p'?
+AddLogModal.propTypes = {
+  addLog: PropTypes.func.isRequired,
+};
+
 const modalStyle = {
   width: '75%',
   height: '75%',
 };
 
-export default AddLogModal;
+export default connect(null, { addLog })(AddLogModal);
