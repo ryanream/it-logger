@@ -1,18 +1,11 @@
 {
   "logs": [
     {
-      "id": 3,
-      "message": "asdfasdf",
-      "tech": "John Doe",
-      "attention": true,
-      "date": "2020-10-30T21:54:58.128Z"
-    },
-    {
+      "id": 4,
       "message": "Hello",
-      "attention": true,
       "tech": "John Doe",
-      "date": "2020-10-30T21:36:34.549Z",
-      "id": 4
+      "attention": true,
+      "date": "2020-10-30T23:15:50.726Z"
     },
     {
       "id": 5,
@@ -20,6 +13,55 @@
       "tech": "Sam Smith",
       "attention": false,
       "date": "2020-10-30T21:41:07.533Z"
+    },
+    {
+      "message": "Need some stuff done ASAP",
+      "attention": true,
+      "tech": "Ryan Ream",
+      "date": "2020-10-31T08:38:48.661Z",
+      "id": 6
+    },
+    {
+      "message": "Fixed 002 hard drive",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2020-10-31T08:39:09.421Z",
+      "id": 7
+    },
+    {
+      "message": "asd",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2020-10-31T08:39:15.231Z",
+      "id": 8
+    },
+    {
+      "message": "adfasedfasdfac",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2020-10-31T08:39:20.277Z",
+      "id": 9
+    },
+    {
+      "message": "asdfasdf",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2020-10-31T08:39:32.454Z",
+      "id": 10
+    },
+    {
+      "message": "fghm,.,mnbvc",
+      "attention": false,
+      "tech": "Sara Wilson",
+      "date": "2020-10-31T08:39:36.384Z",
+      "id": 11
+    },
+    {
+      "message": "Fixed 002 hard drive",
+      "attention": false,
+      "tech": "John Doe",
+      "date": "2020-10-31T08:39:40.486Z",
+      "id": 12
     }
   ],
   "techs": [
@@ -37,6 +79,11 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "Ryan",
+      "lastName": "Ream",
+      "id": 5
     }
   ]
 }
